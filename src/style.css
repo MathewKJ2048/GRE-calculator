@@ -6,11 +6,11 @@
     --operand_foreground: black;
     --operand_background: white;
     --operator_foreground: white;
-    --operator_background: rgb(29, 77, 192);
+    --operator_background: rgb(55, 103, 214);
     --clear_foreground: white;
-    --clear_background: orange;
-    --m_foreground: white;
-    --m_background: rgb(7, 7, 129);
+    --clear_background: rgb(177, 109, 7);
+    --function_foreground: white;
+    --function_background: rgb(7, 7, 129);
     --transfer_foreground: white;
     --transfer_background: rgb(60, 60, 60);
 }
@@ -22,11 +22,12 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border-radius: calc(var(--button_size)*0.20);
 }
-/*
+
 button
 {
-    border-radius: 10px;
-}*/
+    
+    border: calc(var(--button_size)*0.05) solid var(--background_color)
+}
 
 .calculator_grid
 {
@@ -37,17 +38,17 @@ button
     grid-template-rows: repeat(8,var(--button_size));
     background-color: var(--background_color);
 }
-.M, .equal
+.function
 {
-    color: var(--m_foreground);
-    background-color: var(--m_background);
+    color: var(--function_foreground);
+    background-color: var(--function_background);
 }
 .operator
 {
     color: var(--operator_foreground);
     background-color: var(--operator_background);
 }
-.number, .dot
+.number
 {
     color: var(--operand_foreground);
     background-color: var(--operand_background);
