@@ -23,20 +23,34 @@
     border-radius: calc(var(--button_size)*0.20);
 }
 
+
 button
+{   
+    border: calc(var(--button_size)*0.001) solid var(--background_color)
+}
+
+button:hover
 {
-    
-    border: calc(var(--button_size)*0.05) solid var(--background_color)
+    cursor:pointer;
 }
 
 .calculator_grid
 {
+    width: min-content;
     display: grid;
+    padding: calc(var(--button_size)*0.1);
+    grid-gap: calc(var(--button_size)*0.1);
     justify-content: center;
-    align-content: center;
     grid-template-columns: repeat(5,var(--button_size));
     grid-template-rows: repeat(8,var(--button_size));
     background-color: var(--background_color);
+}
+.screen
+{
+    display:flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: calc(var(--button_size)*0.1)
 }
 .function
 {
@@ -74,4 +88,10 @@ button
     color: var(--operand_foreground);
     background-color: var(--operand_background);
     grid-column: span 5;
+}
+.dummy
+{
+    color: var(--background_color);
+    background-color: var(--background_color);
+    grid-column: span 4;
 }
