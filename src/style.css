@@ -1,26 +1,26 @@
 
 :root
 {
-    --button_size: 64px;
-    --background_color: gray;
+    --button_size: 40px;
+    --background_color: rgb(211,211,211);
     --operand_foreground: black;
-    --operand_background: white;
+    --operand_background: rgb(235,240,245);
     --operator_foreground: white;
-    --operator_background: rgb(55, 103, 214);
+    --operator_background: rgb(58, 119, 160);
     --clear_foreground: white;
-    --clear_background: rgb(177, 109, 7);
+    --clear_background: rgb(186, 90, 19);
     --function_foreground: white;
-    --function_background: rgb(7, 7, 129);
+    --function_background: rgb(35, 71, 96);
     --transfer_foreground: white;
     --transfer_background: rgb(60, 60, 60);
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
-    font-size: xx-large;
+    font-size: large;
     font-weight: bolder;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border-radius: calc(var(--button_size)*0.20);
+    border-radius: calc(var(--button_size)*0.10);
 }
 
 
@@ -32,13 +32,18 @@ button
 button:hover
 {
     cursor:pointer;
+    border: 1px solid white;
+}
+button:active
+{
+    filter: brightness(80%);
 }
 
 .calculator_grid
 {
     width: min-content;
     display: grid;
-    padding: calc(var(--button_size)*0.1);
+    padding: calc(var(--button_size)*0.2);
     grid-gap: calc(var(--button_size)*0.1);
     justify-content: center;
     grid-template-columns: repeat(5,var(--button_size));
@@ -50,7 +55,11 @@ button:hover
     display:flex;
     align-items: flex-end;
     flex-direction: column;
-    padding: calc(var(--button_size)*0.1)
+    padding: calc(var(--button_size)*0.2);
+    font-weight: 100;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    /*make font bolder*/
+    
 }
 .function
 {
@@ -66,6 +75,10 @@ button:hover
 {
     color: var(--operand_foreground);
     background-color: var(--operand_background);
+}
+.number:hover
+{
+    border: 1px solid black;
 }
 .clear
 {
@@ -85,8 +98,8 @@ button:hover
 }
 .screen
 {
-    color: var(--operand_foreground);
-    background-color: var(--operand_background);
+    color: black;
+    background-color: white;
     grid-column: span 5;
 }
 .dummy

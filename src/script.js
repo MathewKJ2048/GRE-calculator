@@ -1,3 +1,10 @@
+/*
+bracket enable/disable
+limit is 8 to left, 7 to right
+commas every three digits
+*/
+
+
 class Calculator
 {
     constructor(screenTextElement)
